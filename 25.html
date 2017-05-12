@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>Intro: Resizable Interaction</title>
+
+<style>
+  #box
+{
+    width:100px;
+    height:100px;
+    background: pink;
+    border: 1px solid black;
+    margin: 50px;
+    }
+
+</style>
+
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<!-- <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery.js"></script>
+      <script src="jquery-ui.js"></script> -->
+
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+      $("img, div").resizable();
+  });
+</script>
+
+</head>
+
+<body>
+<img src="search.jpg" width="150px" height="99px"/>
+<div id="box"></div>
+
+</body>
+</html>
