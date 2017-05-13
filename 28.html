@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>Restrict Resizing</title>
+
+<style>
+  #box1, #box2
+{
+    width:200px;
+    height:200px;
+    border: 1px solid black;
+    margin: 50px;
+    float:left;
+    }
+
+    #box2
+  {
+      width:200px;
+      height:200px;
+      background: purple;
+      border: 1px solid black;
+      margin: 50px;
+      }
+
+      #main
+    {
+        width:800px;
+        height:400px;
+        background: blue;
+        border: 2px solid black;
+        margin: 0px auto;
+        }
+
+</style>
+
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<!-- <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery.js"></script>
+      <script src="jquery-ui.js"></script> -->
+
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+      $("#box1").resizable({minHeight:50, containment:"#main"});
+      $("#box2").resizable({minHeight:150, maxHeight:300, minWidth:150, maxWidth:220});
+  });
+</script>
+
+</head>
+
+<body>
+  <div id="main">
+<div id="box1" style="background: silver;"></div>
+<p id="box2" style="background: pink;">Stay Woke</div>
+</div>
+</body>
+</html>
