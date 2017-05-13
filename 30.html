@@ -4,32 +4,23 @@
       <title>Restrict Resizing</title>
 
 <style>
-  #box1, #box2
+  #box1
 {
     width:200px;
-    height:200px;
+    height:100px;
     border: 1px solid black;
     margin: 50px;
-    float:left;jbkm'sdd
+    background: purple;
     }
 
     #box2
   {
-      width:200px;
-      height:200px;
-      background: purple;
+      width:100px;
+      height:20px;
+      background: pink;
       border: 1px solid black;
       margin: 50px;
       }
-
-      #main
-    {
-        width:800px;
-        height:400px;
-        background: blue;
-        border: 2px solid black;
-        margin: 0px auto;
-        }
 
 </style>
 
@@ -47,17 +38,20 @@
 
   <script>
   $(document).ready(function(){
-      $("#box1").resizable({minHeight:50, containment:"#main"});
-      $("#box2").resizable({minHeight:140, maxHeight:300, minWidth:150, maxWidth:220});
+      $("#box1").resizable({aspectRatio:true, stop:function(){
+      alert("Height: " + $(this).css("height") + "\n Width: " + $(this).css("width"))
+    }});
+      $("#box2").resizable({aspectRatio:3, stop:function(){
+      alert("Height: " + $(this).css("height") + "\n Width: " + $(this).css("width"))
+    }});
   });
 </script>
 
 </head>
 
 <body>
-  <div id="main">
 <div id="box1" style="background: silver;"></div>
-<p id="box2" style="background: pink;">Stay Woke</div>
-</div>
+<div id="box2" style="background: pink;">Stay Woke</div>
+
 </body>
 </html>
