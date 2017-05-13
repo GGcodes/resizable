@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>Restrict Resizing</title>
+
+<style>
+  #box1
+{
+    width:200px;
+    height:100px;
+    border: 1px solid black;
+    margin: 50px;
+    background: purple;
+    }
+
+</style>
+
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<!-- <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery.js"></script>
+      <script src="jquery-ui.js"></script> -->
+
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+      $("#box1").resizable({animate:true, animateDuration:5000, animateEasing:"easeOutBounce"});
+  });
+</script>
+
+</head>
+
+<body>
+<div id="box1" style="background: pink;">Stay Woke</div>
+
+</body>
+</html>
