@@ -13,15 +13,6 @@
     background: purple;
     }
 
-    #box2
-  {
-      width:100px;
-      height:20px;
-      background: pink;
-      border: 1px solid black;
-      margin: 50px;
-      }
-
 </style>
 
 <link rel="stylesheet" href="jquery-ui.css">
@@ -38,20 +29,14 @@
 
   <script>
   $(document).ready(function(){
-      $("#box1").resizable({aspectRatio:true, stop:function(){
-      alert("Height: " + $(this).css("height") + "\n Width: " + $(this).css("width"))
-    }});
-      $("#box2").resizable({aspectRatio:3, stop:function(){
-      alert("Height: " + $(this).css("height") + "\n Width: " + $(this).css("width"))
-    }});
+      $("#box1").resizable({animate:true, animateDuration:5000, animateEasing:"easeOutBounce"});
   });
 </script>
 
 </head>
 
 <body>
-<div id="box1" style="background: silver;"></div>
-<div id="box2" style="background: pink;">Stay Woke</div>
+<div id="box1" style="background: pink;">Stay Woke</div>
 
 </body>
 </html>
